@@ -1,0 +1,27 @@
+str = "kifahe"
+res_str = str.replace('e', '')
+print ("after removal:" + res_str)
+
+min = int(input("Enter the min : "))
+max = int(input("Enter the max : "))
+for n in range(min,max + 1):
+   if n > 1:
+       for i in range(2,n):
+           if (n % i) == 0:
+               break
+       else:
+           print(n)
+           
+ str = "ai is the only future"
+
+print("repeated characters in a given string: ")
+for i in range(0, len(str)):
+    count = 1
+    for j in range(i + 1, len(str)):
+        if (str[i] == str[j] and str[i] != ' '):
+            count = count + 1
+            str = str[:j] + '0' + str[j + 1:]
+
+    if (count > 1 and str[i] != '0'):
+        print(str[i], " - ", count)
+        
